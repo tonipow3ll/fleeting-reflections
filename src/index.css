@@ -11,3 +11,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* list with no styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a{
+  color: #000;
+}
+/* text box */
+input {
+  height: 50px;
+}
+/* buttons */
+.addBtn{
+  background: transparent;
+  border: 0;
+  font-size: 150%;
+  border-radius: 3px;
+}
+.addBtn:hover{
+  background: #01d1b2;
+}
+.remove-button{
+  /* color: #fff; */
+  font-size: 150%;
+  float: right;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+}
+.remove-button:hover{
+  background-color: #01d1b2;
+}
+/* footer fix */
+.fix-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow:hidden;
+}
+.thescream {
+  background-image: url('./images/thescream.jpg');
+  height: 100vh;
+}
+.screamcontainer{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.thought{
+  /* background-color: #01d1b2; */
+  background-color: #fafafa;
+}

@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import { Columns, Container } from 'react-bulma-components';
 
 export function Thought(props:any) {
     const { thought, removeThought } = props;
@@ -13,8 +14,13 @@ export function Thought(props:any) {
             removeThought(thought.id)
         }, timeRemaining)
     }, [thought])
+
     return(
-        <li className="Thought">
+      <div>
+        <Container className="screamcontainer">
+       {/* <Columns className="is-centered justify-content-center">
+        <Columns.Column  size="one-quarter"> */}
+        <li className="thought">
         <button
           aria-label="Remove thought"
           className="remove-button"
@@ -24,5 +30,9 @@ export function Thought(props:any) {
         </button>
         <div className="text">{thought.text}</div>
       </li>
+      {/* </Columns.Column>
+        </Columns> */}
+        </Container>
+      </div>
     )
 }

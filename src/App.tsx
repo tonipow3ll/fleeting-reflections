@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-// import ReactDom from 'react-dom';
 
 import { createExpirationTime, createId } from '../src/utils/expiration';
 import { NewThoughtForm } from './components/Form';
 import { Thought } from './components/Main';
-import Footer from './components/Footer';
+import Header from './components/Hero'
+import FooterNav from './components/Footer'
+import 'bulma/css/bulma.css'
 
 
 import '@fontsource/roboto';
@@ -19,11 +20,6 @@ function App() {
       text: 'Thoughts will appear here, they will dissapear after about 10 seconds',
       expiresAt: createExpirationTime()
     },
-    {
-      id: createId(),
-      text: 'Type something in the input box, and hit + to see!',
-      expiresAt: createExpirationTime()
-    }
   ]);
 //  { id: number; text: string; expiresAt: number; }
    const addThought = (thought:any) => {
@@ -35,22 +31,18 @@ function App() {
      );
    };
   return (
-    <div className="App">
-      <header>
-        <h1>Fleeting Reflections</h1>
-        <h3>Share your thoughts with the ether, nothing here gets saved!</h3>
-      </header>
-      <main>
+    <div className="App thescream">
+    <Header />
+
+     
     <NewThoughtForm addThought={addThought}/>
     <ul>
       {thoughts.map((thought) => (
         <Thought key={thought.id} thought={thought} removeThought={removeThought} />
       ))}
     </ul>
-    </main>
-      <Footer />
+        <FooterNav />
     </div>
-    
   );
 }
 

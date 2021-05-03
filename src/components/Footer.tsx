@@ -1,20 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
+import { Footer } from 'react-bulma-components'
+import { FaGithub, FaEnvelopeOpen } from 'react-icons/fa';
 
-function Footer() {
-    const styles = {
-        stickToBottom: {
-          width: '100%',
-          position: 'fixed',
-          bottom: 0,
-        },
-      };
-    return (
-        <BottomNavigation>
-            <p>stuff here</p>
-        </BottomNavigation>
+function FooterNav() {
+    return(
+        <div>
+        <Footer className="pt-0 pb-0 fix-footer">
+            <p>Made with 🖤 , just for fun
+            <a href="https://github.com/tonipow3ll" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+            <a href="mailto:tonipow3ll@gmail.com"><FaEnvelopeOpen /></a>
+            </p>
+          
+        </Footer>
+        </div>
     )
 }
 
-export default Footer;
+export default FooterNav;
